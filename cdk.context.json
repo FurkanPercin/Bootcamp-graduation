@@ -1,0 +1,23 @@
+{
+  "infra": {
+    "env": "dev",
+    "account": "010876915553",
+    "region": "eu-central-1",
+    "vpcId": "vpc-08538e223ded8f146",
+    "availabilityZones": [
+      "eu-central-1a",
+      "eu-central-1b"
+    ],
+    "publicSubnetIds": [
+      "subnet-032c0d35f5d769916",
+      "subnet-03ffcf391381e7762"
+    ],
+    "minAutoScaleTaskCount": 1,
+    "maxAutoScaleTaskCount": 5,
+    "fargateServiceDesiredCount": 1
+  },
+  "hosted-zone:account=010876915553:domainName=percin.tech:region=us-east-1": {
+    "Id": "/hostedzone/Z04864691RI5WK8SMB65L",
+    "Name": "percin.tech."
+  }
+}
