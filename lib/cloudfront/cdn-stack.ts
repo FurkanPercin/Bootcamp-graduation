@@ -21,7 +21,7 @@ export class CDNCloudFront extends Stack {
         //CloudFront works in Virginia (since it's global). For this reason, sharing between regions is like this.
         
     });
-    const certificate = aws_certificatemanager.Certificate.fromCertificateArn(this, 'CDNCertificate', 'arn:aws:acm:us-east-1:010876915553:certificate/935e521f-3bd9-4478-aab5-0bc0f0262058');
+    const certificate = aws_certificatemanager.Certificate.fromCertificateArn(this, 'CDNCertificate', 'arn:aws:acm:us-east-1:010876915553:certificate/935e521f-7777-4478-aab5-0bc0f0262058');
 
     const distribution = new aws_cloudfront.CloudFrontWebDistribution(this,'PatikaCDN',{
         originConfigs:[

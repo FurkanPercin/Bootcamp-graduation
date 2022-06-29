@@ -15,15 +15,14 @@ export class ServicesEnvBucketStack extends Stack {
 
     const buck=new aws_s3.Bucket(this,'ServicesEnvBucket',{
       bucketName:`${config.account}-${config.region}-services-env-bucket`,
-      //bucket name'ler globally unique olduğu için başka bir aws account'unda 
-      //veya region'unda bu isimde bucket açılamaz. 
-      //Bu sebeple bu şekilde isimlendirmek daha mantıklı.
+      //Since bucket names are globally unique, a bucket with this name cannot be opened in another aws account or region. 
+      //For this reason, it makes more sense to name it this way.
       blockPublicAccess: {
         blockPublicAcls: true,
         blockPublicPolicy: true,
         ignorePublicAcls: true,
         restrictPublicBuckets: true,
-      },//gel verileri bu veri yolundan al dediklerimiz hariç herkese kapalı
+      },//Come and get the data from this data path, it is closed to everyone except those we say
       removalPolicy:RemovalPolicy.RETAIN,
     });
 

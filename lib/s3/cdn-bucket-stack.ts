@@ -14,9 +14,8 @@ export class CDNBucket extends Stack {
     //'Resource physical ID'
     const bucket = new aws_s3.Bucket(this,'CDNBucket',{
         bucketName:`${config.account}-${config.region}-cdn-bucket`,
-        //bucket name'ler globally unique olduğu için başka bir aws account'unda 
-        //veya region'unda bu isimde bucket açılamaz. 
-        //Bu sebeple bu şekilde isimlendirmek daha mantıklı.
+      //Since bucket names are globally unique, a bucket with this name cannot be opened in another aws account or region. 
+      //For this reason, it makes more sense to name it this way.
         blockPublicAccess: {
             blockPublicAcls: true,
             blockPublicPolicy: true,
